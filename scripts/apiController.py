@@ -1,7 +1,7 @@
 import apiHandler
 import datetime
 
-def getHoliday(year: str, month: str) -> list:
+def getHoliday(year:str, month:str) -> list:
     import xml.etree.ElementTree as elemTree
 
     endPoint = apiHandler.HOLIDAY_ENDPOINT()

@@ -112,9 +112,10 @@ def main():
                 
         
         if timeTable is not None and station is not None:
-            os.system("python update.py \"%s\" \"%s\"" % (curr_time, str(station)))
+            os.system("python3 update-shuttle.py \"%s\" \"%s\"" % (curr_time, str(station)))
                 
-    
+        
+        os.system("python3 update-bus.py")
         time.sleep(59)
     
     
