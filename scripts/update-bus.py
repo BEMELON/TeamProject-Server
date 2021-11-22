@@ -14,7 +14,7 @@ def getArrivalList(url):
 
     body = tree.find('msgBody')
     if body is None: return []
-    else: return body.findAll("busArrivalList")
+    else: return body.findall("busArrivalList")
 
 
 def main():

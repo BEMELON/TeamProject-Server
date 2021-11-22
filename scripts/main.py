@@ -7,6 +7,7 @@ import apiHandler
 import apiController
 import dataHandler
 
+# -*- coding: utf-8 -*-
 holiday_year = 0
 holiday_month = 0
 holiday_table = []
@@ -108,8 +109,7 @@ def main():
                 timeTable = dataHandler.MJU_STATION_WEEKDAY_TIMETABLE()
                 station = dataHandler.MJU_STATION_COOR()
             else:
-                timeTable = station = None
-                
+                timeTable = station = None 
         
         if timeTable is not None and station is not None:
             os.system("python3 update-shuttle.py \"%s\" \"%s\"" % (curr_time, str(station)))
