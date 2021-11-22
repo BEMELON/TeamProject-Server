@@ -19,6 +19,7 @@ def main():
             url = apiHandler.NAVER_ENDPOINT() % (station[i][1], station[i][0], station[i + 1][1], station[i + 1][0])
             time_sec = apiController.getRoadInfo(url) // 1000
             result.append(time_sec)
+            print("worked, sleeping")
             sleep(time_sec)
 
 

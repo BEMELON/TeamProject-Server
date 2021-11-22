@@ -51,7 +51,7 @@ def downloadS3(local_path: str, remote_path: str, service: str):
     S3_ACCESS_KEY = apiHandler.NCLOUD_ACCESS_KEY()
     S3_SECRET_KEY = apiHandler.NCLOUD_SECRET_KEY()
 
-    s3 = boto3.client(service, 
+    s3 = boto3.client("s3", 
                       endpoint_url = "https://kr.object.ncloudstorage.com",
                       aws_access_key_id = S3_ACCESS_KEY,
                       aws_secret_access_key = S3_SECRET_KEY)
@@ -65,7 +65,7 @@ def uploadS3(local_path: str, remote_path: str, service: str):
     S3_ACCESS_KEY = apiHandler.NCLOUD_ACCESS_KEY()
     S3_SECRET_KEY = apiHandler.NCLOUD_SECRET_KEY()
 
-    s3 = boto3.client(service, 
+    s3 = boto3.client("s3", 
                       endpoint_url = "https://kr.object.ncloudstorage.com",
                       aws_access_key_id = S3_ACCESS_KEY,
                       aws_secret_access_key = S3_SECRET_KEY)

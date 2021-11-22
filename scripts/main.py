@@ -109,13 +109,12 @@ def main():
                 timeTable = dataHandler.MJU_STATION_WEEKDAY_TIMETABLE()
                 station = dataHandler.MJU_STATION_COOR()
             else:
-                timeTable = station = None 
+                timeTable = station = None
         
         if timeTable is not None and station is not None:
-            os.system("python3 update-shuttle.py \"%s\" \"%s\"" % (curr_time, str(station)))
+            subprocess.Popen(["python3", "update-shuttle.py", curr_time, str(station)])
                 
-        
-        os.system("python3 update-bus.py")
+        subprocess.Popen(["python3", "update-bus.py"])
         time.sleep(59)
     
     
