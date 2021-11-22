@@ -4,6 +4,7 @@ import apiHandler
 import ast
 import datetime
 from time import sleep
+
 def main():
     try:
         time = sys.argv[1]
@@ -12,14 +13,13 @@ def main():
         result = []
      
         day = apiController.weekDay(datetime.datetime.now())
-        local_path = "/root/shuttle-data/%s/%s/data" % (day, time)
-        remote_path = "%s/%s/data" % (day, time)
+        local_path = "/root/shuttle-data/%s/%s/info" % (day, time)
+        remote_path = "%s/%s/info" % (day, time)
     
         for i in range(len(station) - 1):
             url = apiHandler.NAVER_ENDPOINT() % (station[i][1], station[i][0], station[i + 1][1], station[i + 1][0])
             time_sec = apiController.getRoadInfo(url) // 1000
-            result.append(time_sec)
-            print("worked, sleeping")
+            result.append(math.ceil(time_sec / 60))
             sleep(time_sec)
 
 
