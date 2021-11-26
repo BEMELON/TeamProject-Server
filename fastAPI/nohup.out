@@ -1,0 +1,8 @@
+INFO:     Will watch for changes in these directories: ['/root/TeamProject-Server/fastAPI']
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+INFO:     Started reloader process [8571] using watchgod
+INFO:     Started server process [8573]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     117.17.158.86:53534 - "GET /detect/bus HTTP/1.1" 200 OK
+it worked
