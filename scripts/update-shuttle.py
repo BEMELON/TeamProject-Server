@@ -30,7 +30,7 @@ def main():
         with open(local_path, "r") as fp:
             datas = fp.readlines()
             if datas != None and len(datas) > 0:
-                datas = datas.split(",")
+                datas = datas[0].split(",")
                 count = int(datas[-1])
                 datas = list(map(int, datas))
             
@@ -50,6 +50,8 @@ def main():
         print(" * [%s] subProgram Finished" % (time))
     except Exception as e:
         print(" * Error in update-shuttle subProgram => ", e)
+        print("    * remote path : %s" % (remote_path))
+        print("    * local path  : %s" % (local_path))
 
 if __name__ == "__main__":
     main()

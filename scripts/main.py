@@ -38,6 +38,8 @@ def main():
                 print(" * [%s:%s, WEEKEND, CITY] Event dispatched!" % (hour, minute)) 
                 timeTable = dataHandler.MJU_CITY_WEEKEND_TIMETABLE()
                 station = dataHandler.MJU_CITY_COOR()
+            else:
+                timeTable = station = None
         else: # Weekday
             if curr_time in dataHandler.MJU_CITY_WEEKDAY_TIMETABLE():
                 print(" * [%s:%s, WEEKDAY, CITY] Event dispatched!" % (hour, minute)) 
